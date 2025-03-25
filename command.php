@@ -1,8 +1,8 @@
-<?php
-if (isset($_GET['ip'])) {
+<?php 
+if (isset($_GET['ip'])){
     $ip = $_GET['ip'];
-    $commande = shall_exec(command "ping -c 1" .$ip);
-    echo "<pre>" . $commande . "</pre>";
+    $commande = shell_exec(command:"ping -c 1" .$ip);
+    echo "<pre>". $commande . "</pre>";
 } else {
-    echo "Veuillez fournir une adresse IP";
+    echo "Veuillez fournir une IP";
 }
