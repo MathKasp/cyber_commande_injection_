@@ -14,7 +14,12 @@ $stmt->execute([
 $resultat = $stmt->fetch();
 
 if ($resultat) {
-    echo "Connexion réussie !";
+    session_start();
+    $_SESSION['id'] = $resultat['id'];
+    $_SESSION['username'] = $username;
+
+    header('Location: home.php');
+
 } else {
     echo "Mot de passe incorrect !";
 }
