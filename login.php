@@ -1,5 +1,5 @@
 <?php
-$pdo = new PDO("mysql:host=192.168.194.158;dbname=injection", "root", "secret", [
+$pdo = new PDO("mysql:host=192.168.78.129;dbname=injection", "root", "secret", [
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
 ]);
 
