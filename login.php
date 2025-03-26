@@ -9,7 +9,7 @@ $password = htmlspecialchars($_POST['password']);
 $stmt = $pdo->prepare("SELECT * FROM users WHERE username = :username AND password = :password");
 $stmt->execute([
     'username' => $username,
-    'password' => $passwordt
+    'password' => $password,
 ]);
 $resultat = $stmt->fetch();
 
